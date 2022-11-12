@@ -1,1 +1,1 @@
-# Codeing-Challenge-In-Phyton
+# Coding-Challenge-In-Python
