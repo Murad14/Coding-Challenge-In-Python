@@ -17,13 +17,16 @@ while len(guessed_division) < 8:
     answer_division = screen.textinput(title=f"{len(guessed_division)}/8 Division Correct",
                                     prompt="What's another division's name?").title()
     if answer_division == "Exit":
-        missing_division = []
-        for division in all_division:
-            if division not in guessed_division:
-                missing_division.append(division)
+        #list_comprehension
+        missing_division = [division for division in all_division if division not in guessed_division]
+        # missing_division = []
+        # for division in all_division:
+        #     if division not in guessed_division:
+        #         missing_division.append(division)
         new_data = pandas.DataFrame(missing_division)
         new_data.to_csv("division_to_learn.csv")
         break
+
     if answer_division in all_division:
         guessed_division.append(answer_division)
         t = turtle.Turtle()
