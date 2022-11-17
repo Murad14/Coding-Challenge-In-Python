@@ -7,6 +7,7 @@
 <img src="picture1.png" width="350" title= "profile image"/> 
 
 <br>
+
 🍅 When work period will end it will show the user to take 5 minutes break time. And also check marks ✔️ also displyed so that user can tracking their activity.
 
 <br>
