@@ -40,8 +40,6 @@ def save():
                 password_entry.delete(0,END)
 
 # ---------------------------- UI SETUP ------------------------------- #
-from tkinter import *
-
 
 window = Tk()
 window.title("Password Manager")
