@@ -35,9 +35,27 @@ class QuizInterface:
         self.f_button = Button(image=f_button, highlightthickness=0, borderwidth=0, command= self.false_pressed)
         self.f_button.grid(row=2, column=1)
 
+        # reset_button = PhotoImage(file="images/reset.png")
+        # self.reset_button = Button (image=reset_button, highlightthickness=0, borderwidth=0,command= self.reset_pressed)
+        # self.reset_button.grid(row=0, column=0, padx=46, pady=10)
+
         self.get_next_question()
 
         self.window.mainloop()
+
+    # def for_reset(self) -> list:
+    #     question_bank = []
+    #     question_data = QuizBrain(q_list=QuizInterface).next_question()
+    #     for question in question_data:
+    #         question = question["question"], question["correct_answer"]
+    #         question_bank.append(question)
+    #     return question_bank
+    #
+    # def reset_pressed(self):
+    #     self.question_bank = self.for_reset()
+    #     self.quiz_brain = QuizBrain(self.question_bank)
+    #     self.get_next_question()
+
 
     def get_next_question(self):
         self.canvas.config(bg="white")
@@ -65,4 +83,5 @@ class QuizInterface:
         else:
             self.canvas.config(bg="red")
         self.window.after(1000, self.get_next_question)
+
 
