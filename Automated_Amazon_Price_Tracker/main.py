@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 
 MY_EMAIL = "muradulalam4@gmail.com"
-MY_PASSWORD = "qoqlbkuvyvbfbysx"
+MY_PASSWORD = "################" #removed for security purpose
 BUY_PRICE = 200
 SMTP_ADDRESS = "muradul_alam@yahoo.com"
 
