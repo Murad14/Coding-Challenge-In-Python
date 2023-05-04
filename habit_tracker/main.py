@@ -41,7 +41,7 @@ today = datetime.now()
 # print(today.strftime("%d,%B,%Y"))
 
 pixel_data = {
-    "date": today.strftime("%Y%m%d"),
+    "date": today.strftime("%Y%m%d"), #dateformetbyYYYYmmDD
     "quantity": input("Input today's total commit: "),
 }
 
