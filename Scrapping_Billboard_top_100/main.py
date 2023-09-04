@@ -5,17 +5,19 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 URL = "https://www.billboard.com/charts/hot-100/"
-CLIENT_ID =  "382f99c90fb54d57914dd8257b84d131"
-CLIENT_SECRET = "#############################" #removed for security purpose
+CLIENT_ID = "382f99c90fb54d57914dd8257b84d131"
+CLIENT_SECRET = "#############################"  # removed for security purpose
 
-DATE = input("Which date do you want to travel to? Type the date in this format: YYYY-MM-DD:\n")
+DATE = input(
+    "Which date do you want to travel to? Type the date in this format: YYYY-MM-DD:\n")
 
 response = requests.get(URL + DATE)
 data = response.text
 soup = BeautifulSoup(data, "html.parser")
 
 song_list = []
-song_data = soup.find_all(name="h3",id="title-of-a-story", class_="a-no-trucate")
+song_data = soup.find_all(
+    name="h3", id="title-of-a-story", class_="a-no-trucate")
 for song in song_data:
     song_list = song.getText().strip("\n\t")
     pprint(song_list)
